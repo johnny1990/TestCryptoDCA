@@ -1,0 +1,34 @@
+﻿
+@model CryptoInvestment
+
+<h2>Select Cryptocurrency and Start Date</h2>
+
+<form asp-action="CalculateDCA" method="post">
+    <div class="row">
+        <div class="col-md-4">
+    <label class="control-label">Cryptocurrency</label>
+    <select asp-for="CryptoSymbol" class="form-control">
+        <option value="BTC">Bitcoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="LTC">Litecoin</option>
+        <option value="RPL">Ripple</option>
+    </select>
+
+    <div>&nbsp;</div>
+
+    <label class="control-label">Start Date</label>
+    <input type="date" asp-for="StartDate" class="form-control" />
+
+    <div>&nbsp;</div>
+
+    <label class="control-label">Monthly Investment Amount (EUR)</label>
+    <input type="number" asp-for="MonthlyAmount" class="form-control" />
+
+    <div>&nbsp;</div>
+
+
+    <button type="submit" class="btn btn-primary">Calculate</button>
+    </div>
+    </div>
+</form>
+
